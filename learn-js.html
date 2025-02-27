@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html data-theme="light" lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="Learn JavaScript basics with detailed explanations and examples." />
+    <meta name="author" content="DesignBeginner" />
+    <title>DesignBeginner - Learn JavaScript</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Custom Google font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet" />
+    <!-- Bootstrap icons-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body class="d-flex flex-column h-100">
+    <main class="flex-shrink-0">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg">
+            <div class="container px-5">
+                <a style="text-decoration: none;" href="learn.html"><div class="backarrow"><i class="fa-solid fa-arrow-left"></i></div></a>
+                <a class="navbar-brand" href="index.html"><span class="fw-bolder">DesignBeginner</span></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon">&#9776;</span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="learn.html">Learn</a></li>
+                        <li class="nav-item"><a class="nav-link" href="quiz.html">Quiz</a></li>
+                        <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Page Content-->
+        <div class="container px-5 my-5">
+            <div class="text-center mb-5">
+                <h1 class="display-5 fw-bolder mb-0"><span class="text-gradient d-inline">Learn Web Design Basics</span></h1>
+            </div>
+            <div class="row gx-5 justify-content-center">
+                <div class="col-lg-11 col-xl-9 col-xxl-8">
+                    <!-- JavaScript Section-->
+                    <section>
+                        <div class="d-flex justify-content-center mb-4">
+                            <h2 class="text-primary fw-bolder"><i class="bi bi-code-slash section-icon"></i> JavaScript Basics</h2>
+                        </div>
+
+                        <!-- Introduction to JavaScript -->
+                        <div class="card shadow border-0 rounded-4 mb-5">
+                            <div class="card-body p-5">
+                                <h3 class="text-primary fw-bolder">What is JavaScript?</h3>
+                                <p>JavaScript is a programming language used to add interactivity to webpages. It allows you to manipulate HTML and CSS elements, handle user interactions, and create dynamic content.</p>
+                                <p>Here's a simple example of JavaScript in action:</p>
+                                <pre><code>
+&lt;button onclick="alert('Hello, World!');"&gt;Click Me&lt;/button&gt;
+                                </code></pre>
+                                <p>When the button is clicked, a pop-up message saying "Hello, World!" will appear.</p>
+                            </div>
+                        </div>
+
+                        <!-- JavaScript Functions -->
+                        <div class="card shadow border-0 rounded-4 mb-5">
+                            <div class="card-body p-5">
+                                <h3 class="text-primary fw-bolder">JavaScript Functions</h3>
+                                <p>Functions are reusable blocks of code that perform a specific task. They help you organize your code and avoid repetition.</p>
+                                <p>Here's how to define and call a function:</p>
+                                <pre><code>
+function greet() {
+    alert("Hello, welcome to the website!");
+}
+
+// Call the function
+greet();
+                                </code></pre>
+                                <p>You can also pass parameters to functions:</p>
+                                <pre><code>
+function greetUser(name) {
+    alert("Hello, " + name + "!");
+}
+
+// Call the function with a parameter
+greetUser("Alice");
+                                </code></pre>
+                            </div>
+                        </div>
+
+                        <!-- DOM Manipulation -->
+                        <div class="card shadow border-0 rounded-4 mb-5">
+                            <div class="card-body p-5">
+                                <h3 class="text-primary fw-bolder">DOM Manipulation</h3>
+                                <p>The DOM (Document Object Model) represents the structure of a webpage as a tree of objects. JavaScript allows you to manipulate the DOM to change the content, structure, or style of elements.</p>
+                                <p>Here are some common DOM manipulation techniques:</p>
+                                <ul>
+                                    <li><strong>Change Text</strong>:
+                                        <pre><code>
+document.getElementById("myElement").innerText = "New Text";
+                                        </code></pre>
+                                    </li>
+                                    <li><strong>Change HTML</strong>:
+                                        <pre><code>
+document.getElementById("myElement").innerHTML = "&lt;strong&gt;New Text&lt;/strong&gt;";
+                                        </code></pre>
+                                    </li>
+                                    <li><strong>Change Style</strong>:
+                                        <pre><code>
+document.getElementById("myElement").style.color = "red";
+                                        </code></pre>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Event Handling -->
+                        <div class="card shadow border-0 rounded-4 mb-5">
+                            <div class="card-body p-5">
+                                <h3 class="text-primary fw-bolder">Event Handling</h3>
+                                <p>JavaScript allows you to respond to user actions, such as clicks, mouse movements, and keyboard input. This is done using event listeners.</p>
+                                <p>Here's an example of adding a click event listener to a button:</p>
+                                <pre><code>
+&lt;button id="myButton"&gt;Click Me&lt;/button&gt;
+
+&lt;script&gt;
+    document.getElementById("myButton").addEventListener("click", function() {
+        alert("Button clicked!");
+    });
+&lt;/script&gt;
+                                </code></pre>
+                                <p>When the button is clicked, a pop-up message will appear.</p>
+                            </div>
+                        </div>
+
+                        <!-- Variables and Data Types -->
+                        <div class="card shadow border-0 rounded-4 mb-5">
+                            <div class="card-body p-5">
+                                <h3 class="text-primary fw-bolder">Variables and Data Types</h3>
+                                <p>Variables are used to store data in JavaScript. You can declare variables using <code>let</code>, <code>const</code>, or <code>var</code>.</p>
+                                <p>Here are some examples:</p>
+                                <pre><code>
+let name = "Alice"; // String
+const age = 25;     // Number (constant)
+var isStudent = true; // Boolean
+                                </code></pre>
+                                <p>JavaScript supports several data types, including:</p>
+                                <ul>
+                                    <li><strong>Strings</strong>: Text data, e.g., <code>"Hello"</code>.</li>
+                                    <li><strong>Numbers</strong>: Numeric data, e.g., <code>42</code>.</li>
+                                    <li><strong>Booleans</strong>: True or false values.</li>
+                                    <li><strong>Arrays</strong>: Lists of data, e.g., <code>[1, 2, 3]</code>.</li>
+                                    <li><strong>Objects</strong>: Key-value pairs, e.g., <code>{ name: "Alice", age: 25 }</code>.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer-->
+    <footer>
+        <div class="container px-5">
+            <div class="row align-items-center justify-content-between flex-column flex-sm-row">
+                <div class="col-auto"><div class="small m-0">Copyright &copy; All Rights Reserved</div></div>
+                <div class="col-auto">
+                    <a class="small" href="#!">Privacy</a>
+                    <span class="mx-1">&middot;</span>
+                    <a class="small" href="#!">Terms</a>
+                    <span class="mx-1">&middot;</span>
+                    <a class="small" href="#!">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+</body>
+</html>

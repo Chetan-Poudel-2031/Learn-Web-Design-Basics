@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Todo List!</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap" rel="stylesheet">
+    <style>
+        @import url("https://fonts.googleapis.com/css?family=Lato:400,400i,700");
+        body {
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          align-items: center;
+          height: 100vh;
+          background: #9e96df;
+          margin: 0;
+        }
+
+        .back {
+          text-align: center;
+          font-size: 3em;
+          color: white;
+          font-weight: bolder;
+          font-family: Caveat Brush, cursive;
+          margin-top: 20px;
+          width: 100%;
+        }
+
+        .todo-list {
+          display: flex;
+          flex-direction: column;
+          padding: 0 75px 10px 30px;
+          background: #162740;
+          border: transparent;
+          border-radius: 10px;
+          margin-top: 30px;
+          width: 100%;
+          max-width: 600px;
+          position: relative; /* Added relative positioning */
+          right: 50px;
+        }
+
+        .todo-list .todo-list__title {
+          padding: 3px 6px;
+          color: #f1faee;
+          background-color: #264456;
+        }
+
+        .todo-list .todo-list__label {
+          display: flex;
+          align-items: center;
+          margin: 40px 0;
+          font-size: 24px;
+          font-family: Lato, sans-serif;
+          color: #f1faee;
+          cursor: pointer;
+        }
+
+        .todo-list .todo-list__label input[type=checkbox] {
+          opacity: 0;
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          appearance: none;
+        }
+
+        .todo-list .todo-list__label input[type=checkbox] + .check {
+          position: absolute;
+          width: 25px;
+          height: 25px;
+          border: 2px solid #f1faee;
+          transition: 0.2s;
+        }
+
+        .todo-list .todo-list__label input[type=checkbox]:checked + .check {
+          width: 25px;
+          height: 15px;
+          border-top: transparent;
+          border-right: transparent;
+          transform: rotate(-45deg);
+        }
+
+        .todo-list .todo-list__label input[type=checkbox] ~ span {
+          position: relative;
+          left: 40px;
+          white-space: nowrap;
+          transition: 0.5s;
+        }
+
+        .todo-list .todo-list__label input[type=checkbox] ~ span::before {
+          position: absolute;
+          content: "";
+          top: 50%;
+          left: 0;
+          width: 100%;
+          height: 1px;
+          background: #f1faee;
+          transform: scaleX(0);
+          transform-origin: right;
+          transition: transform 0.5s;
+        }
+
+        .todo-list .todo-list__label input[type=checkbox]:checked ~ span {
+          color: #585b57;
+        }
+
+        .todo-list .todo-list__label input[type=checkbox]:checked ~ span::before {
+          transform: scaleX(1);
+          transform-origin: left;
+        }
+
+        /* Add the plus sign button at the bottom-right of the todo-list box */
+        .add-btn {
+          position: fixed;
+          bottom: 20px;
+          right: 20px;
+          width: 60px;
+          height: 60px;
+          background-color: #264456;
+          color: white;
+          border-radius: 50%;
+          font-size: 36px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          cursor: pointer;
+        }
+
+        /* Style the new todo input field */
+        .new-todo {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: #264456;
+          border-radius: 10px;
+          padding: 10px;
+          margin-top: 20px;
+          width: 100%;
+          max-width: 600px;
+        }
+
+        .new-todo input {
+          width: 80%;
+          padding: 8px;
+          margin-right: 10px;
+          font-size: 18px;
+          border: none;
+          border-radius: 5px;
+          background-color: #f1faee;
+        }
+
+        .new-todo button {
+          padding: 10px 20px;
+          background-color: #f1faee;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="back">
+      Back to the Website, <a href="projects.html"> Click Here! </a>
+    </div>
+    <form>
+      <fieldset class="todo-list">
+        <legend class="todo-list__title">Todo List</legend>
+        <label class="todo-list__label">
+          <input type="checkbox" name="" id="" />
+          <i class="check"></i>
+          <span>Attend meeting</span>
+        </label>
+        <label class="todo-list__label">
+          <input type="checkbox" name="" id="" />
+          <i class="check"></i>
+          <span>Complete Assignment</span>
+        </label>
+        <label class="todo-list__label">
+          <input type="checkbox" name="" id="" />
+          <i class="check"></i>
+          <span>Finish design for new website</span>
+        </label>
+        <label class="todo-list__label">
+          <input type="checkbox" name="" id="" />
+          <i class="check"></i>
+          <span>Go to gym</span>
+        </label>
+      </fieldset>
+    </form>
+
+    <!-- Plus button to add new todo (positioned inside the todo-list box) -->
+    <div class="add-btn" onclick="addNewTodo()">+</div>
+
+    <!-- New todo input form (hidden initially) -->
+    <div class="new-todo" style="display: none;">
+      <input type="text" id="newTodoInput" placeholder="Add a new todo..." onfocus="this.select()" />
+      <button onclick="submitNewTodo()">Add</button>
+    </div>
+
+    <script>
+      // Function to show input for new todo and focus on the input field
+      function addNewTodo() {
+        var inputField = document.getElementById("newTodoInput");
+        document.querySelector(".new-todo").style.display = "flex";
+        inputField.focus(); // Focuses the input field immediately
+      }
+
+      // Function to add new todo to the list when Enter is pressed
+      document.getElementById("newTodoInput").addEventListener("keydown", function(event) {
+        if (event.key === "Enter") {
+          submitNewTodo();
+        }
+      });
+
+      // Function to add new todo to the list
+      function submitNewTodo() {
+        var newTodoText = document.getElementById("newTodoInput").value;
+        if (newTodoText.trim()) {
+          var todoList = document.querySelector(".todo-list");
+          var newLabel = document.createElement("label");
+          newLabel.classList.add("todo-list__label");
+          
+          var newCheckbox = document.createElement("input");
+          newCheckbox.type = "checkbox";
+          
+          var newCheck = document.createElement("i");
+          newCheck.classList.add("check");
+          
+          var newSpan = document.createElement("span");
+          newSpan.textContent = newTodoText;
+          
+          newLabel.appendChild(newCheckbox);
+          newLabel.appendChild(newCheck);
+          newLabel.appendChild(newSpan);
+          
+          todoList.appendChild(newLabel);
+          
+          // Clear input and hide the form again
+          document.getElementById("newTodoInput").value = "";
+          document.querySelector(".new-todo").style.display = "none";
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html data-theme="light" lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="Learn HTML basics with detailed explanations and examples." />
+    <meta name="author" content="DesignBeginner" />
+    <title>DesignBeginner - Learn HTML</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Custom Google font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet" />
+    <!-- Bootstrap icons-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body class="d-flex flex-column h-100">
+    <main class="flex-shrink-0">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg">
+            <div class="container px-5">
+                <a style="text-decoration: none;" href="learn.html"><div class="backarrow"><i class="fa-solid fa-arrow-left"></i></div></a>
+                <a class="navbar-brand" href="index.html"><span class="fw-bolder">DesignBeginner</span></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon">&#9776;</span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="learn.html">Learn</a></li>
+                        <li class="nav-item"><a class="nav-link" href="quiz.html">Quiz</a></li>
+                        <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Page Content-->
+        <div class="container px-5 my-5">
+            <div class="text-center mb-5">
+                <h1 class="display-5 fw-bolder mb-0"><span class="text-gradient d-inline">Learn Web Design Basics</span></h1>
+            </div>
+            <div class="row gx-5 justify-content-center">
+                <div class="col-lg-11 col-xl-9 col-xxl-8">
+                    <!-- HTML Section-->
+                    <section>
+                        <!-- Center the header and add margin-bottom -->
+                        <div class="d-flex justify-content-center mb-2">
+                            <h2 class="text-primary fw-bolder"><i class="bi bi-file-earmark-code section-icon"></i> HTML Basics</h2>
+                        </div>
+                        <div class="card shadow border-0 rounded-4 mb-5">
+                            <div class="card-body p-5">
+                                <div class="row align-items-center gx-5">
+                                    <div class="col text-center text-lg-start mb-4 mb-lg-0">
+                                        <div class="card-body-inner p-4 rounded-4">
+                                            <div class="text-primary fw-bolder mb-2">HTML Structure</div>
+                                            <div class="small text-muted">Learn about the structure of a webpage with basic HTML tags.</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-8">
+                                        <p>HTML (HyperText Markup Language) is the standard language for creating web pages. It defines the structure and layout of a webpage using various tags. Let's break it down:</p>
+                                        <ul>
+                                            <li><code>&lt;!DOCTYPE html&gt;</code>: This declaration defines the document type and version of HTML (HTML5 in this case).</li>
+                                            <li><code>&lt;html&gt;</code>: The root element of an HTML document. Everything else is nested inside this tag.</li>
+                                            <li><code>&lt;head&gt;</code>: Contains meta-information about the document, such as the title, character encoding, and links to external resources like stylesheets or scripts. This section is not visible on the webpage.</li>
+                                            <li><code>&lt;body&gt;</code>: Contains the visible content of the webpage, such as text, images, links, and other elements.</li>
+                                        </ul>
+                                        <p><strong>Example:</strong></p>
+                                        <pre><code>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;My First Webpage&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Welcome to My Webpage!&lt;/h1&gt;
+    &lt;p&gt;This is a paragraph of text.&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+                                        </code></pre>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- HTML Tags and Attributes-->
+                        <div class="card shadow border-0 rounded-4 mb-5">
+                            <div class="card-body p-5">
+                                <div class="row align-items-center gx-5">
+                                    <div class="col text-center text-lg-start mb-4 mb-lg-0">
+                                        <div class="card-body-inner rounded-4">
+                                            <div class="text-primary fw-bolder mb-2">HTML Tags & Attributes</div>
+                                            <div class="small text-muted">Understand the role of attributes in HTML and how to use them to add functionality and styling.</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-8">
+                                        <p>HTML tags define the structure and content of a webpage. Attributes provide additional information about an element and are always included in the opening tag.</p>
+                                        <ul>
+                                            <li><code>&lt;a href="URL"&gt;</code>: Creates a hyperlink to a specified URL using the <code>href</code> attribute. Example: <code>&lt;a href="https://www.example.com"&gt;Visit Example&lt;/a&gt;</code>.</li>
+                                            <li><code>&lt;img src="image.jpg" alt="Description"&gt;</code>: Displays an image using the <code>src</code> attribute to specify the image location and the <code>alt</code> attribute to provide alternative text for accessibility. Example: <code>&lt;img src="logo.png" alt="Company Logo"&gt;</code>.</li>
+                                            <li><code>&lt;div class="container"&gt;</code>: Defines a division or section with a specified class for styling. Example: <code>&lt;div class="header"&gt;This is the header&lt;/div&gt;</code>.</li>
+                                        </ul>
+                                        <p><strong>Common Attributes:</strong></p>
+                                        <ul>
+                                            <li><code>class</code>: Used to apply CSS styles to multiple elements.</li>
+                                            <li><code>id</code>: Used to uniquely identify an element.</li>
+                                            <li><code>style</code>: Used to apply inline CSS styles.</li>
+                                            <li><code>title</code>: Provides additional information about an element (shown as a tooltip).</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- New Section: Common HTML Elements -->
+                        <div class="card shadow border-0 rounded-4 mb-5">
+                            <div class="card-body p-5">
+                                <div class="row align-items-center gx-5">
+                                    <div class="col text-center text-lg-start mb-4 mb-lg-0">
+                                        <div class="card-body-inner rounded-4">
+                                            <div class="text-primary fw-bolder mb-2">Common HTML Elements</div>
+                                            <div class="small text-muted">Learn about the most commonly used HTML elements.</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-8">
+                                        <p>Here are some of the most commonly used HTML elements:</p>
+                                        <ul>
+                                            <li><code>&lt;h1&gt; to &lt;h6&gt;</code>: Headings. <code>&lt;h1&gt;</code> is the largest and <code>&lt;h6&gt;</code> is the smallest.</li>
+                                            <li><code>&lt;p&gt;</code>: Paragraphs. Used for blocks of text.</li>
+                                            <li><code>&lt;ul&gt; and &lt;ol&gt;</code>: Unordered and ordered lists. Use <code>&lt;li&gt;</code> for list items.</li>
+                                            <li><code>&lt;table&gt;</code>: Creates a table. Use <code>&lt;tr&gt;</code> for rows, <code>&lt;th&gt;</code> for headers, and <code>&lt;td&gt;</code> for data cells.</li>
+                                            <li><code>&lt;form&gt;</code>: Used to create forms for user input. Includes elements like <code>&lt;input&gt;</code>, <code>&lt;button&gt;</code>, and <code>&lt;textarea&gt;</code>.</li>
+                                        </ul>
+                                        <p><strong>Example:</strong></p>
+                                        <pre><code>
+&lt;h1&gt;This is a Heading&lt;/h1&gt;
+&lt;p&gt;This is a paragraph.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Item 1&lt;/li&gt;
+  &lt;li&gt;Item 2&lt;/li&gt;
+&lt;/ul&gt;
+                                        </code></pre>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer-->
+    <footer>
+        <div class="container px-5">
+            <div class="row align-items-center justify-content-between flex-column flex-sm-row">
+                <div class="col-auto"><div class="small m-0">Copyright &copy; All Rights Reserved</div></div>
+                <div class="col-auto">
+                    <a class="small" href="#!">Privacy</a>
+                    <span class="mx-1">&middot;</span>
+                    <a class="small" href="#!">Terms</a>
+                    <span class="mx-1">&middot;</span>
+                    <a class="small" href="#!">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+</body>
+</html>

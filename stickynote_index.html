@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html data-theme="light" lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>DesignBeginner - Projects</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Custom Google font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet" />
+    <!-- Bootstrap icons-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+<style>
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        main {
+            flex: 1;
+        }
+        .output {
+        font-size: 1.2em;
+        font-weight: bold;
+        color: white;
+        background-color: cornflowerblue;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 10px;
+        position: relative;
+        top: 1em;
+        bottom: 1em;
+        left: 50%;
+        transform: translateX(-50%);
+        cursor: pointer;
+    }
+    .output:hover {
+        background-color: deepskyblue;
+    }
+        .code-box {
+            width: 80%;
+            max-width: 800px;
+            background: var(--color-3);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .code-block {
+            position: relative;
+            background: var(--color-1);
+            color: var(--color-4);
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            overflow-x: auto;
+        }
+        .copy-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: cornflowerblue;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    z-index: 10; /* Ensures it stays above content */
+}
+
+/* Prevents overlap on smaller screens */
+@media (max-width: 600px) {
+    .copy-btn {
+        position: relative; /* Moves it inside the content */
+        display: block;
+        margin: 10px auto ; /* Centers the button */
+        width: 100px; /* Adjust size for better fit */
+        text-align: center;
+    }
+}
+
+    </style>
+</style>
+
+</head>
+
+<body class="d-flex flex-column h-100">
+    <main class="flex-shrink-0">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg">
+            <div class="container px-5">
+                <a style="text-decoration: none;" href="projects.html"><div class="backarrow"><i class="fa-solid fa-arrow-left"></i></div></a>
+                <a class="navbar-brand" href="index.html"><span class="fw-bolder">DesignBeginner</span></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon">&#9776;</span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="learn.html">Learn</a></li>
+                        <li class="nav-item"><a class="nav-link" href="quiz.html">Quiz</a></li>
+                        <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Page Content-->
+        <div class="container px-5 my-5">
+            <div class="text-center mb-5">
+                <h1 class="display-5 fw-bolder mb-0"><span class="text-gradient d-inline">Let's make creative StickyNotes!</span></h1>
+            </div>
+            <div class="row gx-5 justify-content-center">
+                <div class="content-intro">
+                    <p>
+                        Here is the code to create creative Sticky Notes using HTML, CSS, and JavaScript. You can customize the design and functionality to suit your preferences and learning goals. Happy coding!</p>
+                    </p>
+                </div>
+                <div class="code-box">
+                    <h2>HTML, CSS & JS Code Viewer</h2>
+                    
+                    <div class="code-block">
+                        <button class="copy-btn" onclick="copyCode('html-code')">Copy</button>
+                        <pre id="html-code">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;title&gt;Creative StickyNotes!&lt;/title&gt;
+    &lt;meta charset="UTF-8" /&gt;
+    &lt;meta name="viewport" content="width=device-width" /&gt;
+    &lt;link rel="stylesheet" href="styles.css" /&gt;
+    &lt;link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap" rel="stylesheet"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class="sticky-notes"&gt;
+      &lt;div class="note-container"&gt;
+        &lt;div class="note-content" contenteditable&gt;
+          Create Sticky Note Using HTML, CSS, and JavaScript.
+        &lt;/div&gt;
+        &lt;div class="note-actions"&gt;
+          &lt;button class="delete-note" onclick="deleteNote(this)"&gt;Delete&lt;/button&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="create-note" title="New Notes" onclick="createNote()"&gt;+&lt;/div&gt;
+    &lt;script src="js/scripts.js"&gt;&lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+
+</pre>
+                    </div>
+                    
+                    <div class="code-block">
+                        <button class="copy-btn" onclick="copyCode('css-code')">Copy</button>
+                        <pre id="css-code">
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+                      
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #1f1d2b;
+    font-family: 'Gloria Hallelujah', cursive;
+    min-height: 100vh;
+    flex-direction: column;
+    padding: 20px;
+}
+                      
+.sticky-notes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 90%;
+    justify-content: center;
+}
+                      
+.note-container {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    background: linear-gradient(#f9efaf, #f7e98d);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.2s ease-in-out;
+}
+                      
+.note-container:hover {
+    transform: scale(1.05);
+}
+                      
+.note-content {
+    padding: 15px;
+    height: calc(100% - 40px);
+    border: none;
+    outline: none;
+}
+                      
+.note-actions {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+                      
+.delete-note {
+    background-color: #ff6347;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+                      
+.delete-note:hover {
+    background-color: #d9534f;
+}
+                      
+.create-note {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5rem;
+    width: 250px;
+    height: 250px;
+    background-color: #fff;
+    color: #888;
+    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+    margin: 10px;
+}
+                      
+.create-note:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+                      
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .note-container, .create-note {
+      width: 200px;
+      height: 200px;
+    }
+    .create-note {
+      font-size: 4rem;
+    }
+    .back {
+      font-size: 2em;
+    }
+}
+                      
+@media (max-width: 480px) {
+    .note-container, .create-note {
+      width: 150px;
+      height: 150px;
+    }
+    .create-note {
+      font-size: 3rem;
+    }
+    .back {
+      font-size: 1.8em;
+    }
+}
+</pre>
+                    </div>
+                </div>
+                <button onclick="window.location.href='stickynote.html'" class="output">Output</button>
+            </div>
+        </div>
+    </main>
+    
+    <!-- Footer-->
+    <footer>
+        <div class="container px-5">
+            <div class="row align-items-center justify-content-between flex-column flex-sm-row">
+                <div class="col-auto"><div class="small m-0">Copyright &copy; All Rights Reserved</div></div>
+                <div class="col-auto">
+                    <a class="small" href="#!">Privacy</a>
+                    <span class="mx-1">&middot;</span>
+                    <a class="small" href="#!">Terms</a>
+                    <span class="mx-1">&middot;</span>
+                    <a class="small" href="#!">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+    <script>
+        function copyCode(elementId) {
+            const code = document.getElementById(elementId).innerText;
+            navigator.clipboard.writeText(code).then(() => {
+                alert("Code copied successfully!");
+            }).catch(err => {
+                console.error("Failed to copy: ", err);
+            });
+        }
+    </script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DesignBeginner - Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fce4ec;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            padding: 30px;
+            max-width: 600px;
+            width: 100%;
+            text-align: center;
+        }
+        h1 {
+            margin-bottom: 20px;
+            color: #ec407a;
+        }
+        #question {
+            font-size: 22px;
+            margin-bottom: 30px;
+            color: #ec407a;
+        }
+        .btn-container {
+            display: flex;
+            flex-direction: column;
+            margin-top: 20px;
+        }
+        .btn {
+            margin: 10px 0;
+            padding: 15px;
+            border: none;
+            border-radius: 8px;
+            background-color: #ec407a;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        .btn:hover {
+            background-color: #d81b60;
+            transform: scale(1.05);
+        }
+        .next-btn {
+            margin-top: 30px;
+            padding: 15px 25px;
+            border: none;
+            border-radius: 8px;
+            background-color: #ec407a;
+            color: white;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .next-btn:hover {
+            background-color: #d81b60;
+            transform: scale(1.05);
+        }
+        .incorrect {
+            background-color: #ff1744;
+        }
+        .correct {
+            background-color: #00c853;
+        }
+        .incorrect:hover{
+            background-color: red;
+        }
+        .correct:hover{
+            background-color: #00c853;
+        }
+        #score {
+            font-size: 20px;
+            color: #ec407a;
+            margin-top: 20px;
+        }
+        .backarrow {
+            height: 1.8em;
+            width: 1.8em;
+            background-color: lightcoral;
+            border-radius: 50%;
+            margin-right: 1em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: transform 0.3s ease;
+            color: white;
+        }
+
+        .backarrow:hover {
+            transform: scale(1.2); /* Scale the entire back arrow, including the icon */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a style="text-decoration: none;" href="quiz.html"><div class="backarrow"><img style="height: 1.2em; width: 1.2em; color: white;" src="assets/arrow.png"></div></a>
+        <h1>CSS Quiz</h1>
+        <div id="quiz-container">
+            <div id="question-container">
+                <p id="question">Question will appear here</p>
+            </div>
+            <div id="answer-buttons" class="btn-container">
+                <button class="btn">Answer 1</button>
+                <button class="btn">Answer 2</button>
+                <button class="btn">Answer 3</button>
+                <button class="btn">Answer 4</button>
+            </div>
+        </div>
+        <div id="score"></div>
+        <button id="next-btn" class="next-btn" style="display:none;">Next</button>
+    </div>
+    <script>
+        const quizData = {
+            css: [
+                { question: "What does CSS stand for?", answers: ["Creative Style Sheets", "Cascading Style Sheets", "Computer Style Sheets", "Colorful Style Sheets"], correct: "Cascading Style Sheets" },
+                { question: "Which HTML attribute is used to define inline styles?", answers: ["style", "class", "font", "styles"], correct: "style" },
+                { question: "Which is the correct CSS syntax?", answers: ["{body:color=black;}", "body {color: black;}", "{body;color:black;}", "body:color=black;"], correct: "body {color: black;}" },
+                { question: "Which property is used to change the background color?", answers: ["color", "bgcolor", "background-color", "background"], correct: "background-color" },
+                { question: "Which property is used to change the text color of an element?", answers: ["color", "text-color", "font-color", "font"], correct: "color" },
+                { question: "Which property is used to change the font of an element?", answers: ["font-family", "font-weight", "font-style", "font-variant"], correct: "font-family" },
+                { question: "Which property is used to control the spacing between lines of text?", answers: ["line-height", "spacing", "line-spacing", "height"], correct: "line-height" },
+                { question: "How do you select an element with id 'demo'?", answers: ["#demo", ".demo", "demo", "*demo"], correct: "#demo" },
+                { question: "Which property is used to change the left margin of an element?", answers: ["margin-left", "padding-left", "left-margin", "margin"], correct: "margin-left" },
+                { question: "Which CSS property is used to create space between the border and the content of an element?", answers: ["padding", "spacing", "margin", "border-spacing"], correct: "padding" }
+            ]
+        };
+
+        let currentQuestionIndex = 0;
+        let currentCategory = 'css';
+        let score = 0;
+
+        function loadQuestion() {
+            const currentQuestion = quizData[currentCategory][currentQuestionIndex];
+            document.getElementById('question').textContent = currentQuestion.question;
+            const buttons = document.querySelectorAll('.btn');
+            buttons.forEach(button => {
+                button.classList.remove('incorrect', 'correct');
+                button.disabled = false;
+            });
+            currentQuestion.answers.forEach((answer, index) => {
+                buttons[index].textContent = answer;
+                buttons[index].onclick = () => checkAnswer(answer);
+            });
+            document.getElementById('next-btn').style.display = 'none';
+        }
+
+        function checkAnswer(selectedAnswer) {
+            const correctAnswer = quizData[currentCategory][currentQuestionIndex].correct;
+            const buttons = document.querySelectorAll('.btn');
+            buttons.forEach(button => button.disabled = true);
+            
+            if (selectedAnswer === correctAnswer) {
+                buttons.forEach(button => {
+                    if (button.textContent === selectedAnswer) {
+                        button.classList.add('correct');
+                    }
+                });
+                score++;
+            } else {
+                buttons.forEach(button => {
+                    if (button.textContent === selectedAnswer) {
+                        button.classList.add('incorrect');
+                    }
+                    if (button.textContent === correctAnswer) {
+                        button.classList.add('correct');
+                    }
+                });
+            }
+
+            document.getElementById('next-btn').style.display = 'block';
+        }
+
+        function nextQuestion() {
+            currentQuestionIndex++;
+            if (currentQuestionIndex < quizData[currentCategory].length) {
+                loadQuestion();
+            } else {
+                showScore();
+            }
+        }
+
+        function showScore() {
+            document.getElementById('question-container').style.display = 'none';
+            document.getElementById('answer-buttons').style.display = 'none';
+            document.getElementById('next-btn').style.display = 'none';
+
+            const scoreElement = document.getElementById('score');
+            scoreElement.textContent = `Your Score: ${score}/${quizData[currentCategory].length}`;
+            
+            const restartBtn = document.createElement('button');
+            restartBtn.textContent = 'Restart';
+            restartBtn.className = 'next-btn';
+            restartBtn.onclick = restartQuiz;
+            document.querySelector('.container').appendChild(restartBtn);
+        }
+
+        function restartQuiz() {
+            currentQuestionIndex = 0;
+            score = 0;
+            document.getElementById('question-container').style.display = 'block';
+            document.getElementById('answer-buttons').style.display = 'flex';
+            document.getElementById('score').textContent = '';
+            document.querySelector('.container').removeChild(document.querySelector('.next-btn'));
+            loadQuestion();
+        }
+
+        document.getElementById('next-btn').addEventListener('click', nextQuestion);
+
+        loadQuestion();
+    </script>
+</body>
+</html>

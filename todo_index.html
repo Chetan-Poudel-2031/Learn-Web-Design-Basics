@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html data-theme="light" lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>DesignBeginner - Projects</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Custom Google font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet" />
+    <!-- Bootstrap icons-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+<style>
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        main {
+            flex: 1;
+        }
+        .output {
+        font-size: 1.2em;
+        font-weight: bold;
+        color: white;
+        background-color: cornflowerblue;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 10px;
+        position: relative;
+        top: 1em;
+        bottom: 1em;
+        left: 50%;
+        transform: translateX(-50%);
+        cursor: pointer;
+    }
+    .output:hover {
+        background-color: deepskyblue;
+    }
+        .code-box {
+            width: 80%;
+            max-width: 800px;
+            background: var(--color-3);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .code-block {
+            position: relative;
+            background: var(--color-1);
+            color: var(--color-4);
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            overflow-x: auto;
+        }
+        .copy-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: cornflowerblue;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    z-index: 10; /* Ensures it stays above content */
+}
+
+/* Prevents overlap on smaller screens */
+@media (max-width: 600px) {
+    .copy-btn {
+        position: relative; /* Moves it inside the content */
+        display: block;
+        margin: 10px auto ; /* Centers the button */
+        width: 100px; /* Adjust size for better fit */
+        text-align: center;
+    }
+}
+
+    </style>
+</style>
+
+</head>
+
+<body class="d-flex flex-column h-100">
+    <main class="flex-shrink-0">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg">
+            <div class="container px-5">
+                <a style="text-decoration: none;" href="projects.html"><div class="backarrow"><i class="fa-solid fa-arrow-left"></i></div></a>
+                <a class="navbar-brand" href="index.html"><span class="fw-bolder">DesignBeginner</span></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon">&#9776;</span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="learn.html">Learn</a></li>
+                        <li class="nav-item"><a class="nav-link" href="quiz.html">Quiz</a></li>
+                        <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Page Content-->
+        <div class="container px-5 my-5">
+            <div class="text-center mb-5">
+                <h1 class="display-5 fw-bolder mb-0"><span class="text-gradient d-inline">Track your work with Todo!</span></h1>
+            </div>
+            <div class="row gx-5 justify-content-center">
+                <div class="content-intro">
+                    <p>
+                        Here is the code to create a Todo List using HTML, CSS, and JavaScript. You can customize the design and functionality to suit your preferences and learning goals. Happy coding!</p>
+                    </p>
+                </div>
+                <div class="code-box">
+                    <h2>HTML, CSS & JS Code Viewer</h2>
+                    
+                    <div class="code-block">
+                        <button class="copy-btn" onclick="copyCode('html-code')">Copy</button>
+                        <pre id="html-code">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+&lt;title&gt;Todo List!&lt;/title&gt;
+&lt;meta charset="UTF-8"&gt;
+&lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+&lt;link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap" rel="stylesheet"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class="back"&gt;
+      Back to the Website, &lt;a href="projects.html"&gt; Click Here! &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;form&gt;
+      &lt;fieldset class="todo-list"&gt;
+        &lt;legend class="todo-list__title"&gt;Todo List&lt;/legend&gt;
+        &lt;label class="todo-list__label"&gt;
+          &lt;input type="checkbox" name="" id="" /&gt;
+          &lt;i class="check"&gt;&lt;/i&gt;
+          &lt;span&gt;Attend meeting&lt;/span&gt;
+        &lt;/label&gt;
+        &lt;label class="todo-list__label"&gt;
+          &lt;input type="checkbox" name="" id="" /&gt;
+          &lt;i class="check"&gt;&lt;/i&gt;
+          &lt;span&gt;Complete Assignment&lt;/span&gt;
+        &lt;/label&gt;
+        &lt;label class="todo-list__label"&gt;
+          &lt;input type="checkbox" name="" id="" /&gt;
+          &lt;i class="check"&gt;&lt;/i&gt;
+          &lt;span&gt;Finish design for new website&lt;/span&gt;
+        &lt;/label&gt;
+        &lt;label class="todo-list__label"&gt;
+          &lt;input type="checkbox" name="" id="" /&gt;
+          &lt;i class="check"&gt;&lt;/i&gt;
+          &lt;span&gt;Go to gym&lt;/span&gt;
+        &lt;/label&gt;
+      &lt;/fieldset&gt;
+    &lt;/form&gt;
+
+    &lt;!-- Plus button to add new todo (positioned inside the todo-list box) --&gt;
+    &lt;div class="add-btn" onclick="addNewTodo()"&gt;+&lt;/div&gt;
+
+    &lt;!-- New todo input form (hidden initially) --&gt;
+    &lt;div class="new-todo" style="display: none;"&gt;
+      &lt;input type="text" id="newTodoInput" placeholder="Add a new todo..." onfocus="this.select()" /&gt;
+      &lt;button onclick="submitNewTodo()"&gt;Add&lt;/button&gt;
+    &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+                    </div>
+                    
+                    <div class="code-block">
+                        <button class="copy-btn" onclick="copyCode('css-code')">Copy</button>
+                        <pre id="css-code">
+@import url("https://fonts.googleapis.com/css?family=Lato:400,400i,700");
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100vh;
+  background: #9e96df;
+  margin: 0;
+}
+.todo-list {
+    display: flex;
+    flex-direction: column;
+    padding: 0 75px 10px 30px;
+    background: #162740;
+    border: transparent;
+    border-radius: 10px;
+    margin-top: 30px;
+    width: 100%;
+    max-width: 600px;
+    position: relative; /* Added relative positioning */
+    right: 50px;
+}
+                      
+.todo-list .todo-list__title {
+    padding: 3px 6px;
+    color: #f1faee;
+    background-color: #264456;
+}
+                      
+.todo-list .todo-list__label {
+    display: flex;
+    align-items: center;
+    margin: 40px 0;
+    font-size: 24px;
+    font-family: Lato, sans-serif;
+    color: #f1faee;
+    cursor: pointer;
+}
+                      
+.todo-list .todo-list__label input[type=checkbox] {
+    opacity: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+                      
+.todo-list .todo-list__label input[type=checkbox] + .check {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    border: 2px solid #f1faee;
+    transition: 0.2s;
+}
+                      
+.todo-list .todo-list__label input[type=checkbox]:checked + .check {
+    width: 25px;
+    height: 15px;
+    border-top: transparent;
+    border-right: transparent;
+    transform: rotate(-45deg);
+}
+                      
+.todo-list .todo-list__label input[type=checkbox] ~ span {
+    position: relative;
+    left: 40px;
+    white-space: nowrap;
+    transition: 0.5s;
+}
+                      
+.todo-list .todo-list__label input[type=checkbox] ~ span::before {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: #f1faee;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.5s;
+}
+                      
+.todo-list .todo-list__label input[type=checkbox]:checked ~ span {
+    color: #585b57;
+}
+                      
+.todo-list .todo-list__label input[type=checkbox]:checked ~ span::before {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+                      
+/* Add the plus sign button at the bottom-right of the todo-list box */
+.add-btn {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: #264456;
+    color: white;
+    border-radius: 50%;
+    font-size: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+                      
+/* Style the new todo input field */
+.new-todo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #264456;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 20px;
+    width: 100%;
+    max-width: 600px;
+}
+                      
+.new-todo input {
+    width: 80%;
+    padding: 8px;
+    margin-right: 10px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f1faee;
+}
+                      
+.new-todo button {
+    padding: 10px 20px;
+    background-color: #f1faee;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+</pre>
+                    </div>
+                </div>
+                <button onclick="window.location.href='todo.html'" class="output">Output</button>
+            </div>
+        </div>
+    </main>
+    
+    <!-- Footer-->
+    <footer>
+        <div class="container px-5">
+            <div class="row align-items-center justify-content-between flex-column flex-sm-row">
+                <div class="col-auto"><div class="small m-0">Copyright &copy; All Rights Reserved</div></div>
+                <div class="col-auto">
+                    <a class="small" href="#!">Privacy</a>
+                    <span class="mx-1">&middot;</span>
+                    <a class="small" href="#!">Terms</a>
+                    <span class="mx-1">&middot;</span>
+                    <a class="small" href="#!">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+    <script>
+        function copyCode(elementId) {
+            const code = document.getElementById(elementId).innerText;
+            navigator.clipboard.writeText(code).then(() => {
+                alert("Code copied successfully!");
+            }).catch(err => {
+                console.error("Failed to copy: ", err);
+            });
+        }
+    </script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

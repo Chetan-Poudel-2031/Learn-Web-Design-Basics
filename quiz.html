@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html data-theme="light" lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>DesignBeginner - Quiz</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Custom Google font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet" />
+    <!-- Bootstrap icons-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+    <style>
+        /* General Body and Layout */
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #f8f9fa;
+            display: flex;
+            flex-direction: column;
+         
+        }
+
+        main {
+            flex: 1;
+        }
+
+        footer {
+            margin-top: auto;
+        }
+
+        footer .container {
+            padding-top: 2rem;
+            padding-bottom: 2rem;
+        }
+
+        .choose {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            margin-top: 4rem;
+            flex-wrap: wrap;
+        }
+
+        .choose a {
+            text-decoration: none;
+        }
+
+        .choose-inner {
+            height: 5rem;
+            width: 12rem;
+            border-radius: 10px;
+            color: white;
+            font-weight: bolder;
+            font-size: 1.2rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            margin: 1rem;
+            transition: transform 0.3s;
+        }
+
+        .choose-inner:hover {
+            transform: scale(1.05);
+        }
+      
+        /* Back arrow styling (removed back arrow) */
+        .navbar-back-arrow {
+            display: none;
+            margin-right: 10px;
+            font-size: 1.5rem;
+        }
+
+        /* Show the back arrow only on specific pages */
+        .show-back-arrow .navbar-back-arrow {
+            display: inline-block;
+        }
+
+        /* Media Queries for Responsiveness */
+        @media (max-width: 768px) {
+            .choose {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .choose-inner {
+                width: 80%;
+                margin: 0.5rem 0;
+            }
+
+            footer {
+                padding-top: 1rem;
+                padding-bottom: 1rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .choose-inner {
+                width: 100%;
+                height: 4rem;
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body  class="d-flex flex-column h-100">
+    <main class="flex-shrink-0">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-md">
+            <div class="container px-5">
+                <a class="navbar-brand" href="index.html">
+                    <span class="fw-bolder">DesignBeginner</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon">&#9776;</span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="learn.html">Learn</a></li>
+                        <li class="nav-item"><a class="nav-link" href="quiz.html">Quiz</a></li>
+                        <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Page Content-->
+        <div class="container px-5 my-5">
+            <div class="text-center mb-5">
+                <h1 class="display-5 fw-bolder mb-0"><span class="text-gradient d-inline">Let's check your potential!</span></h1>
+            </div>
+            <div class="row gx-5 justify-content-center">
+                <div class="choose">
+                    <a href="quiz-html.html">
+                        <div class="choose-inner btn btn-primary btn-lg px-5 py-3 me-sm-3 fs-6 fw-bolder">HTML Quiz</div>
+                    </a>
+                    <a href="quiz-css.html">
+                        <div class="choose-inner btn btn-primary btn-lg px-5 py-3 me-sm-3 fs-6 fw-bolder">CSS Quiz</div>
+                    </a>
+                    <a href="quiz-js.html">
+                        <div class="choose-inner btn btn-primary btn-lg px-5 py-3 me-sm-3 fs-6 fw-bolder">JS Quiz</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer-->
+    <footer>
+        <div class="container px-5">
+            <div class="row align-items-center justify-content-between flex-column flex-sm-row">
+                <div class="col-auto"><div class="small m-0">Copyright &copy; All Rights Reserved</div></div>
+                <div class="col-auto">
+                    <a class="small" href="#!">Privacy</a>
+                    <span class="mx-1">&middot;</span>
+                    <a class="small" href="#!">Terms</a>
+                    <span class="mx-1">&middot;</span>
+                    <a class="small" href="#!">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+    <script src="quiz.js"></script>
+</body>
+</html>

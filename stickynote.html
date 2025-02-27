@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Google Font Link at the Top -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah"/>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Creative StickyNotes!</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+        }
+
+        body {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background: #1f1d2b;
+          font-family: 'Gloria Hallelujah', cursive;
+          min-height: 100vh;
+          flex-direction: column;
+          padding: 20px;
+        }
+
+        .sticky-notes {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 20px;
+          max-width: 90%;
+          justify-content: center;
+        }
+
+        .note-container {
+          position: relative;
+          width: 250px;
+          height: 250px;
+          background: linear-gradient(#f9efaf, #f7e98d);
+          border-radius: 10px;
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+          overflow: hidden;
+          transition: transform 0.2s ease-in-out;
+        }
+
+        .note-container:hover {
+          transform: scale(1.05);
+        }
+
+        .note-content {
+          padding: 15px;
+          height: calc(100% - 40px);
+          border: none;
+          outline: none;
+        }
+
+        .note-actions {
+          position: absolute;
+          bottom: 10px;
+          right: 10px;
+        }
+
+        .delete-note {
+          background-color: #ff6347;
+          color: #fff;
+          border: none;
+          padding: 8px 12px;
+          border-radius: 5px;
+          cursor: pointer;
+          font-size: 14px;
+          transition: background-color 0.3s ease;
+        }
+
+        .delete-note:hover {
+          background-color: #d9534f;
+        }
+
+        .create-note {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 5rem;
+          width: 250px;
+          height: 250px;
+          background-color: #fff;
+          color: #888;
+          cursor: pointer;
+          border-radius: 10px;
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+          transition: transform 0.2s ease-in-out;
+          margin: 10px;
+        }
+
+        .create-note:hover {
+          transform: scale(1.05);
+          box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .back {
+          text-align: center;
+          font-size: 2.5em;
+          color: white;
+          font-weight: bolder;
+          margin-bottom: 20px;
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+          .note-container, .create-note {
+            width: 200px;
+            height: 200px;
+          }
+          .create-note {
+            font-size: 4rem;
+          }
+          .back {
+            font-size: 2em;
+          }
+        }
+
+        @media (max-width: 480px) {
+          .note-container, .create-note {
+            width: 150px;
+            height: 150px;
+          }
+          .create-note {
+            font-size: 3rem;
+          }
+          .back {
+            font-size: 1.8em;
+          }
+        }
+    </style>
+  </head>
+  <body>
+    <div class="back">
+      Back to the Website, <a href="projects.html"> Click Here! </a>
+    </div>
+    <div class="sticky-notes">
+      <div class="note-container">
+        <div class="note-content" contenteditable>
+          Create Sticky Note Using HTML, CSS, and JavaScript.
+        </div>
+        <div class="note-actions">
+          <button class="delete-note" onclick="deleteNote(this)">Delete</button>
+        </div>
+      </div>
+    </div>
+    <div class="create-note" title="New Notes" onclick="createNote()">+</div>
+    <script src="js/scripts.js"></script>
+  </body>
+</html>
